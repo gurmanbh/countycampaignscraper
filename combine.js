@@ -11,7 +11,7 @@ function cleandate(e){
 scrapetypes.forEach(function(type){
 	var total = []
 	data.forEach(function(e){
-	if (e.NumReports!=0){
+	if (e.csvstatus=='Y'){
 		var file = io.readDataSync('data/files/'+type+'/'+e.lastname+'_'+e.firstname+'_'+cleandate(e.CycleDate)+'.csv')
 		file.forEach(function(d){
 			d.CycleDate = e.CycleDate

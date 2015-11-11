@@ -72,6 +72,7 @@ function makeRequest(url, cb){
         scrapetypes.forEach(function(e){
            key[e+'_link'] = $('#lnk'+e+'CSV').attr('href');
             if (key[e+'_link']){
+              key.csvstatus = 'Y'
               downloadcsv(key,e)
             }
         })
