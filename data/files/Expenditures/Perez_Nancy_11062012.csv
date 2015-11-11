@@ -1,0 +1,4 @@
+"ExpenditureDate","ExpenditureAmount","AmendmentType","EntityName","FirstName","MiddleName","LastName","NameSuffix","Address1","Address2","City","State","Zip","ExpenditureType","PurposeOfExpense",
+4/5/2012 12:00:00 AM,5371.2000,,"Supervisor of Elections","","","","","240 South Military Trail","","West Palm Beach","FL","33416","MON","Filing Fee",
+5/7/2012 12:00:00 AM,25.0000,,"PNC Bank","","","","","10031 Fox Trail Road South","","West Palm Beach","FL","33411","MON","Account Service Fee",
+5/7/2012 12:00:00 AM,603.8000,,"Nancy Perez","","","","","P.O. Box 4121","","West Palm Beach","FL","33402","MON","Loan Repayment",

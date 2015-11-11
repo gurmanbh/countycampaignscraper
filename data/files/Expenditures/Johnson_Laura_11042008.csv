@@ -1,0 +1,4 @@
+"ExpenditureDate","ExpenditureAmount","AmendmentType","EntityName","FirstName","MiddleName","LastName","NameSuffix","Address1","Address2","City","State","Zip","ExpenditureType","PurposeOfExpense",
+"ExpenditureDate","ExpenditureAmount","AmendmentType","EntityName","FirstName","MiddleName","LastName","NameSuffix","Address1","Address2","City","State","Zip","ExpenditureType","PurposeOfExpense",
+6/12/2008 12:00:00 AM,219.2000,,"","Laura ","","Johnson","","477 S Rosemary Ave #303","","West Palm Beach","FL","33401","REF","Refund loan to candidate",
+5/13/2008 12:00:00 AM,5480.8000,,"PB Cnty Supervisor of Elections","","","","","240 S Military Trail","","WPB","FL","33416","MON","Filing fee",

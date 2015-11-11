@@ -1,0 +1,7 @@
+"ExpenditureDate","ExpenditureAmount","AmendmentType","EntityName","FirstName","MiddleName","LastName","NameSuffix","Address1","Address2","City","State","Zip","ExpenditureType","PurposeOfExpense",
+8/25/2015 12:00:00 AM,2500.0000,,"","Rebecca ","","Shelton","","125 SW 1st avenue","","Boynton Beach","Fl","33435","MON","campaign manager retainer fee",
+"ExpenditureDate","ExpenditureAmount","AmendmentType","EntityName","FirstName","MiddleName","LastName","NameSuffix","Address1","Address2","City","State","Zip","ExpenditureType","PurposeOfExpense",
+9/19/2015 12:00:00 AM,200.0000,,"","Blanca ","","Roman","","6714 Reidel Ave","","Palm Springs","Fl","33461","MON","Staff",
+9/10/2015 12:00:00 AM,550.0000,,"","James","","Nicotra","","10687 Mandya Ct","","Boynton Beach","Fl","33437","MON","Data entry",
+9/18/2015 12:00:00 AM,760.0000,,"Mark Graphics","","","","","4230 Oak Circle","","Boca Raton","FL","33431","MON","Printing",
+9/10/2015 12:00:00 AM,24.2500,,"Wells Fargo","","","","","303 Banyan Blvd","","WPB","FL","33401","MON","Bank charge",

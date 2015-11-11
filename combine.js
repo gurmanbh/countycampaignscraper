@@ -1,11 +1,18 @@
 var io = require('indian-ocean')
 var _ = require('underscore')
+var scrapetypes = ['Contributions','Expenditures','FundTransfers','Distributions']
 
-var data = io.readDataSync('data/processed_data/candidate_cycles_withcsvlink.csv')
-var total = []
-data.forEach(function(e){
-	if (e.istherefunding=='Y'){
-		var file = io.readDataSync('data/files/'+e.lastname+'_'+e.firstname+'_'+cleandate(e.CycleDate)+'.csv')
+var data = io.readDataSync('data/processed_data/candidate_cycles_withcsvlinks.csv')
+var todaydate = (new Date()).toString().split(' ').splice(1,3).join('')
+function cleandate(e){
+  return e.replace(/\//g,'')
+}
+
+scrapetypes.forEach(function(type){
+	var total = []
+	data.forEach(function(e){
+	if (e.NumReports!=0){
+		var file = io.readDataSync('data/files/'+type+'/'+e.lastname+'_'+e.firstname+'_'+cleandate(e.CycleDate)+'.csv')
 		file.forEach(function(d){
 			d.CycleDate = e.CycleDate
 			d.candidatelastname = e.lastname
@@ -14,15 +21,15 @@ data.forEach(function(e){
 			d.CycleName = e.CycleName
 			d.OfficeTitle = e.OfficeTitle
 			delete d[''];
-			if (d.ContributionDate!='ContributionDate'){
+			if (d.State!='State'){
 				total.push(d)
 			}
 		})
 	}
+	})
+
+	io.writeDataSync('data/combined_file/'+type+todaydate+'.csv',total)
 })
 
-function cleandate(e){
-  return e.replace(/\//g,'')
-}
 
-io.writeDataSync('data/combined_file/data.csv',total)
+

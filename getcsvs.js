@@ -6,7 +6,7 @@ var _ = require('underscore')
 var data = []
 var chalk = require('chalk')
 var queue = require('queue-async')
-
+var scrapetypes = ['Contributions','Expenditures','FundTransfers','Distributions']
 var candidate_cycles = io.readDataSync('data/processed_data/candidate_cycles.csv')
 var urls = _.pluck(candidate_cycles,'electionlink')
 // rate limiting functions (la..la..la)
@@ -56,7 +56,7 @@ urls.forEach(function(url){
 q.awaitAll(function(err, bodies){
   console.log(chalk.green('All done!'));
   console.log(bodies.length, 'pages available');
-  io.writeDataSync('data/processed_data/candidate_cycles_withcsvlink.csv', data);
+  io.writeDataSync('data/processed_data/candidate_cycles_withcsvlinks.csv', data);
 });
 
 function makeRequest(url, cb){
@@ -69,14 +69,15 @@ function makeRequest(url, cb){
       if (!err && response.statusCode == 200){
         var $ = cheerio.load(body);
         var key = _.findWhere(candidate_cycles,{'electionlink':url})
+        scrapetypes.forEach(function(e){
+           key[e+'_link'] = $('#lnk'+e+'CSV').attr('href');
+            if (key[e+'_link']){
+              downloadcsv(key,e)
+            }
+        })
 
-        key.downloadlink = $('#lnkContributionsCSV').attr('href');
         // in some cases there is a link, but no funding. Hence, no csv to download is available
-        if (key.downloadlink){
-          downloadcsv(key)
-          // put a check for times when there is funding
-          key.istherefunding='Y'
-        }
+       
         data.push(key)
         cb(null, body);
       } else {
@@ -89,6 +90,6 @@ function cleandate(e){
   return e.replace(/\//g,'')
 }
 
-function downloadcsv(e){
-  request('http://www.pbcelections.org/'+e.downloadlink).pipe(fs.createWriteStream('data/files/'+e.lastname+'_'+e.firstname+'_'+cleandate(e.CycleDate)+'.csv'))
+function downloadcsv(key,e){
+  request('http://www.pbcelections.org/'+key[e+'_link']).pipe(fs.createWriteStream('data/files/'+e+'/'+key.lastname+'_'+key.firstname+'_'+cleandate(key.CycleDate)+'.csv'))
 }

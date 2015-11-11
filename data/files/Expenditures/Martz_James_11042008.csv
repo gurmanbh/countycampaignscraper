@@ -1,0 +1,5 @@
+"ExpenditureDate","ExpenditureAmount","AmendmentType","EntityName","FirstName","MiddleName","LastName","NameSuffix","Address1","Address2","City","State","Zip","ExpenditureType","PurposeOfExpense",
+"ExpenditureDate","ExpenditureAmount","AmendmentType","EntityName","FirstName","MiddleName","LastName","NameSuffix","Address1","Address2","City","State","Zip","ExpenditureType","PurposeOfExpense",
+4/28/2008 12:00:00 AM,5480.8000,,"PBC Supervisor of Elections","","","","","240 S Military Trail"," ","West Palm Beach ","Fl","33415","MON","Qualifying Fee",
+5/12/2008 12:00:00 AM,90000.0000,,"","James","L","Martz","","335 SE 6th Ave  ","","Delray Beach ","Fl","33483","REF","Repay Loan",
+6/26/2008 12:00:00 AM,6519.2000,,"","James","L","Martz","","335 SE 6th Ave  ","","Delray Beach ","Fl","33483","REF","Repay Loan from Self",

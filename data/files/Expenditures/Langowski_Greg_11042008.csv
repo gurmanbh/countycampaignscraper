@@ -1,0 +1,4 @@
+"ExpenditureDate","ExpenditureAmount","AmendmentType","EntityName","FirstName","MiddleName","LastName","NameSuffix","Address1","Address2","City","State","Zip","ExpenditureType","PurposeOfExpense",
+4/25/2008 12:00:00 AM,21.0000,,"Harland Clarke Checks","","","","","PO Box 17451","","Baltimore","MD","21297-1451","MON","Checks",
+"ExpenditureDate","ExpenditureAmount","AmendmentType","EntityName","FirstName","MiddleName","LastName","NameSuffix","Address1","Address2","City","State","Zip","ExpenditureType","PurposeOfExpense",
+7/25/2008 12:00:00 AM,29.0000,,"Campaign Acct. of Gregory Langowski","","","","","108 West Pigeon Plum Drive","#203","Jupiter","FL","33458","DIS","Close of Account",
